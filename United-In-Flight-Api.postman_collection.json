@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "467f2b44-06f5-40b9-a737-4bcda42970f0",
+		"name": "United-In-Flight-Api",
+		"description": "Documentation for the united in flight api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all session data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.unitedwifi.com/portal/r/getAllSessionData",
+					"protocol": "https",
+					"host": [
+						"www",
+						"unitedwifi",
+						"com"
+					],
+					"path": [
+						"portal",
+						"r",
+						"getAllSessionData"
+					]
+				},
+				"description": "This request returns a lot of interesting information including:\n\n1. Wifi portal subscription information\n2. Paid wifi subscription status\n3. Flight info including speed, tempature, altitude, origin, and destination\n4.Destination weather including current weather and weather forecast for the next few days"
+			},
+			"response": []
+		},
+		{
+			"name": "Flight Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://services.inflightpanasonic.aero/inflight/services/flightdata/v1/flightdata",
+					"protocol": "https",
+					"host": [
+						"services",
+						"inflightpanasonic",
+						"aero"
+					],
+					"path": [
+						"inflight",
+						"services",
+						"flightdata",
+						"v1",
+						"flightdata"
+					]
+				},
+				"description": "Returns various in-flight data including some cool stuff such as:\n\n1. Whether all of the doors are closed\n2. State of the pa system - in use or inactive\n3. If there is weight on the wheels\n\nand much much more.\n\nIt also contains the planes current latitude and longitude which although are in a wierd format, should be able to be used to generate zmanim."
+			},
+			"response": []
+		},
+		{
+			"name": "Capture device",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.unitedwifi.com/portal/r/captureDevice",
+					"protocol": "https",
+					"host": [
+						"www",
+						"unitedwifi",
+						"com"
+					],
+					"path": [
+						"portal",
+						"r",
+						"captureDevice"
+					]
+				},
+				"description": "Not sure what this does, but apperently it has to do with creating the device fingerprint for the session data.\n\nProbably just a user-agent sniffer with no return data."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Media Catalog",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.unitedwifi.com/portal/r/getPDESupercatFlat?fstsubcat=1&pgnum=1&pgsize=30",
+					"protocol": "https",
+					"host": [
+						"www",
+						"unitedwifi",
+						"com"
+					],
+					"path": [
+						"portal",
+						"r",
+						"getPDESupercatFlat"
+					],
+					"query": [
+						{
+							"key": "fstsubcat",
+							"value": "1"
+						},
+						{
+							"key": "pgnum",
+							"value": "1"
+						},
+						{
+							"key": "pgsize",
+							"value": "30"
+						}
+					]
+				},
+				"description": "This request returns all movies and tv shows in united's media catalog.\n\nThis includes metadata"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Media Item Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Return more information on a media item by passing in the id of the media item"
+			},
+			"response": []
+		},
+		{
+			"name": "Get in-flight map",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://www.unitedwifi.com/portal/images/map/TabletLandscape.png?",
+					"protocol": "http",
+					"host": [
+						"www",
+						"unitedwifi",
+						"com"
+					],
+					"path": [
+						"portal",
+						"images",
+						"map",
+						"TabletLandscape.png"
+					]
+				},
+				"description": "returns a current image of the in-flight map"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
