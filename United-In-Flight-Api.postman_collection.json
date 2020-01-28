@@ -149,6 +149,31 @@
 				"description": "returns a current image of the in-flight map"
 			},
 			"response": []
+		},
+		{
+			"name": "Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://services.inflightpanasonic.aero/inflight/services/exconnect/v1/status",
+					"protocol": "http",
+					"host": [
+						"services",
+						"inflightpanasonic",
+						"aero"
+					],
+					"path": [
+						"inflight",
+						"services",
+						"exconnect",
+						"v1",
+						"status"
+					]
+				},
+				"description": "Returns the status of external connectivity options"
+			},
+			"response": []
 		}
 	],
 	"protocolProfileBehavior": {}
