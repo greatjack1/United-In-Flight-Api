@@ -236,6 +236,41 @@
 				"description": "Gets the actual article body for a headline by passing in the articles id"
 			},
 			"response": []
+		},
+		{
+			"name": "Get weather",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://services.inflightpanasonic.aero/inflight/services/livetextnews/v1/forecast_weather?icao_code=KJFK&days=3",
+					"protocol": "http",
+					"host": [
+						"services",
+						"inflightpanasonic",
+						"aero"
+					],
+					"path": [
+						"inflight",
+						"services",
+						"livetextnews",
+						"v1",
+						"forecast_weather"
+					],
+					"query": [
+						{
+							"key": "icao_code",
+							"value": "KJFK"
+						},
+						{
+							"key": "days",
+							"value": "3"
+						}
+					]
+				},
+				"description": "Gets weather, requires location codes from the Flight Data request"
+			},
+			"response": []
 		}
 	],
 	"protocolProfileBehavior": {}
