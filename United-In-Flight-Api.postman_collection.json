@@ -174,6 +174,68 @@
 				"description": "Returns the status of external connectivity options"
 			},
 			"response": []
+		},
+		{
+			"name": "Get live text news headlines",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://services.inflightpanasonic.aero/inflight/services/livetextnews/v1/categories?provider_id=1",
+					"protocol": "http",
+					"host": [
+						"services",
+						"inflightpanasonic",
+						"aero"
+					],
+					"path": [
+						"inflight",
+						"services",
+						"livetextnews",
+						"v1",
+						"categories"
+					],
+					"query": [
+						{
+							"key": "provider_id",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Gets live text news headlines"
+			},
+			"response": []
+		},
+		{
+			"name": "Get live text news article",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://services.inflightpanasonic.aero/inflight/services/livetextnews/v1/article?id=339929",
+					"protocol": "http",
+					"host": [
+						"services",
+						"inflightpanasonic",
+						"aero"
+					],
+					"path": [
+						"inflight",
+						"services",
+						"livetextnews",
+						"v1",
+						"article"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "339929"
+						}
+					]
+				},
+				"description": "Gets the actual article body for a headline by passing in the articles id"
+			},
+			"response": []
 		}
 	],
 	"protocolProfileBehavior": {}
